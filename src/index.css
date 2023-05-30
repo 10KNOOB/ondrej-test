@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "WANTED";
+  src: url(../src/fonts/Wanted_LET_Plain.ttf);
+}
+
+/* @layer components {
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .scroll-pt-70 {
+    scroll-padding-top: 70px;
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #000000;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+@layer base {
+  html,
+  body {
+    @apply scroll-smooth scroll-pt-[70px];
+  }
+
+  button {
+    @apply border border-black rounded-full px-2 sm:px-[20px] py-[5px] sm:py-[10px] bg-[#cccccc]
+     text-black text-sm sm:text-[13px] font-normal hover:bg-[#DEAF07] duration-300;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1140px] px-[15px] mx-auto;
+  }
+}
